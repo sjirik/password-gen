@@ -11,7 +11,6 @@ function writePassword() {
 var password = "";
 var passwordC = "";
 firstClick = prompt("Please enter the length of your password (Ex. at least 8 characters, no more than 128 characters)");
-firstClick = parseInt(firstClick);
 
 if (firstClick < 8) {
   alert ("Error: too few characters selected");
@@ -45,6 +44,10 @@ var specialCSelect = confirm("Would you like to use special characters?")
 if (specialCSelect) {
 passwordC += specialC
 }
+
+console.log(passwordC)
+
+console.log(passwordC.length)
 
 for (var i = 0; i < firstClick; i++){
   password = passwordC[Math.floor(Math.random() * passwordC.length)]

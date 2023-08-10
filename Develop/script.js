@@ -22,16 +22,29 @@ if (firstClick > 128) {
   return ""
 }
 
-
 var lowerCSelect = confirm("Would you like to use lowercase characters?")
 
 if (lowerCSelect) {
 passwordChar += lowerC
 }
 
+var upperCSelect = confirm("Would you like to use uppercase characters?")
 
+if (upperCSelect) {
+passwordChar += upperC
+}
 
+var numberCSelect = confirm("Would you like to use numbers?")
 
+if (numberCSelect) {
+passwordChar += numberC
+}
+
+var specialCSelect = confirm("Would you like to use special characters?")
+
+if (specialCSelect) {
+passwordChar += specialC
+}
 
 }
 // Add event listener to generate button

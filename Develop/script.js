@@ -9,7 +9,7 @@ var specialC = "!#$%&()*+,‑"
 // Write password to the #password input
 function writePassword() {
 var password = "";
-var passwordChar = "";
+var passwordC = "";
 firstClick = prompt("Please enter the length of your password (Ex. at least 8 characters, no more than 128 characters)");
 firstClick = parseInt(firstClick);
 
@@ -25,33 +25,33 @@ if (firstClick > 128) {
 var lowerCSelect = confirm("Would you like to use lowercase characters?")
 
 if (lowerCSelect) {
-passwordChar += lowerC
+passwordC += lowerC
 }
 
 var upperCSelect = confirm("Would you like to use uppercase characters?")
 
 if (upperCSelect) {
-passwordChar += upperC
+passwordC += upperC
 }
 
 var numberCSelect = confirm("Would you like to use numbers?")
 
 if (numberCSelect) {
-passwordChar += numberC
+passwordC += numberC
 }
 
 var specialCSelect = confirm("Would you like to use special characters?")
 
 if (specialCSelect) {
-passwordChar += specialC
+passwordC += specialC
 }
 
 for (var i = 0; i < firstClick; i++){
-  password = passwordChar[Math.floor(Math.random() * passwordChar.length]
+  password = passwordC[Math.floor(Math.random() * passwordC.length)]
 }
 
-
-
+document.getElementById("password").value = password
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

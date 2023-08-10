@@ -18,8 +18,17 @@ if (firstClick < 8) {
   return ""
 }
 if (firstClick > 128) {
-  alert ("Error: too many characters selected")
+  alert ("Error: too many characters selected");
+  return ""
 }
+
+
+var lowerCSelect = confirm("Would you like to use lowercase characters?")
+
+if (lowerCSelect) {
+passwordChar += lowerC
+}
+
 
 
 

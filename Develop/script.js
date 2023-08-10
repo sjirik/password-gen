@@ -46,6 +46,12 @@ if (specialCSelect) {
 passwordChar += specialC
 }
 
+for (var i = 0; i < firstClick; i++){
+  password = passwordChar[Math.floor(Math.random() * passwordChar.length]
+}
+
+
+
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
